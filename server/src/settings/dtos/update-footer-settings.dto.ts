@@ -36,4 +36,8 @@ export class UpdateFooterSettingsDto {
   @IsOptional()
   @IsString()
   contactEmail?: string;
+
+  @IsOptional()
+  @IsString()
+  messengerUrl?: string;
 }

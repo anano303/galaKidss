@@ -1,17 +1,25 @@
-.chat-button {
+.chat-button-wrapper {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.chat-button {
+  position: relative;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color:#e50000; 
+  background-color: #e50000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 1000;
   transition: all 0.3s ease;
 }
 
@@ -24,16 +32,108 @@
   transform: scale(0.95);
 }
 
+.chat-edit-trigger {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid #e50000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #e50000;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.chat-edit-trigger:hover {
+  background: #e50000;
+  color: #fff;
+}
+
+.chat-edit-panel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-edit-input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  width: 220px;
+  outline: none;
+}
+
+.chat-edit-input:focus {
+  border-color: #e50000;
+}
+
+.chat-edit-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+
+.chat-edit-btn.save {
+  background: #22c55e;
+  color: #fff;
+}
+
+.chat-edit-btn.cancel {
+  background: #ef4444;
+  color: #fff;
+}
+
+.chat-edit-btn:hover {
+  opacity: 0.85;
+}
+
 @media (max-width: 768px) {
+  .chat-button-wrapper {
+    bottom: 20px;
+    right: 20px;
+  }
+
   .chat-button {
     width: 50px;
     height: 50px;
-    bottom: 20px;
-    right: 20px;
   }
 
   .chat-button svg {
     width: 28px;
     height: 28px;
+  }
+
+  .chat-edit-input {
+    width: 160px;
   }
 }

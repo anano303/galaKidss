@@ -29,6 +29,7 @@ interface FooterSettings {
   facebookUrl: string;
   instagramUrl: string;
   contactEmail: string;
+  messengerUrl: string;
 }
 
 function EditableField({

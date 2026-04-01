@@ -33,6 +33,9 @@ export class FooterSettings {
 
   @Prop({ default: 'info@galakids.ge' })
   contactEmail: string;
+
+  @Prop({ default: 'https://m.me/61574139157964' })
+  messengerUrl: string;
 }
 
 export const FooterSettingsSchema =
