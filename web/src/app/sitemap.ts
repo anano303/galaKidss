@@ -79,7 +79,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL?.includes("localhost")
       ? "https://galakids.ge/api/v1"
       : process.env.NEXT_PUBLIC_API_URL || "https://galakids.ge/api/v1";
-    const response = await fetch(`${apiUrl}/products?limit=1000`);
+    const response = await fetch(`${apiUrl}/products?limit=1000`, { signal: AbortSignal.timeout(5000) });
 
     if (response.ok) {
       const data = await response.json();
@@ -104,7 +104,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL?.includes("localhost")
       ? "https://galakids.ge/api/v1"
       : process.env.NEXT_PUBLIC_API_URL || "https://galakids.ge/api/v1";
-    const response = await fetch(`${apiUrl}/categories`);
+    const response = await fetch(`${apiUrl}/categories`, { signal: AbortSignal.timeout(5000) });
 
     if (response.ok) {
       const categories = await response.json();
