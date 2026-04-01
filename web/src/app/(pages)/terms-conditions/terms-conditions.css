@@ -1,0 +1,272 @@
+.terms-conditions-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: "ALK Life", "Georgia", serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.terms-conditions-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.terms-conditions-title {
+  font-family: "ALK Katerina", sans-serif;
+  font-size: 2.5rem;
+  color: #e50000;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.terms-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.terms-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
+
+.terms-section h2 {
+  font-family: "ALK Katerina", sans-serif;
+  font-size: 1.5rem;
+  color: #e50000;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.terms-section p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.terms-section ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.terms-section li {
+  margin-bottom: 0.5rem;
+}
+
+.terms-effective-date {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.terms-effective-date p {
+  margin: 0;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terms-conditions-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .terms-conditions-content {
+    padding: 1.5rem;
+  }
+
+  .terms-conditions-title {
+    font-size: 2rem;
+  }
+
+  .terms-section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-conditions-title {
+    font-size: 1.8rem;
+  }
+
+  .terms-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .terms-section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ===== Admin Editing Styles ===== */
+.tc-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tc-section-header h2 {
+  margin-bottom: 0;
+}
+
+.tc-section-admin {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.terms-section:hover .tc-section-admin {
+  opacity: 1;
+}
+
+.tc-pencil-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #cf0a0a;
+  opacity: 0.5;
+  padding: 2px 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.tc-pencil-btn:hover {
+  opacity: 1;
+}
+
+.tc-type-toggle {
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.tc-type-toggle:hover {
+  background: #eee;
+  border-color: #ccc;
+}
+
+.tc-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #dc2626;
+  opacity: 0.5;
+  padding: 2px 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.tc-delete-btn:hover {
+  opacity: 1;
+}
+
+.tc-edit-wrap {
+  margin-top: 8px;
+}
+
+.tc-edit-input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #cf0a0a;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.tc-edit-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cf0a0a;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+  resize: vertical;
+  min-height: 80px;
+  box-sizing: border-box;
+}
+
+.tc-edit-input:focus,
+.tc-edit-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(207, 10, 10, 0.15);
+}
+
+.tc-edit-actions {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.tc-edit-btn {
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.tc-save {
+  color: #16a34a;
+}
+
+.tc-save:hover {
+  background: #f0fdf4;
+  border-color: #16a34a;
+}
+
+.tc-cancel {
+  color: #dc2626;
+}
+
+.tc-cancel:hover {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+
+.tc-add-section-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2rem auto 0;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #e50000, #e91e63);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "ALK Katerina", sans-serif;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.tc-add-section-btn:hover {
+  background: linear-gradient(90deg, #e91e63, #e50000);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+}
