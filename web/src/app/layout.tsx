@@ -41,12 +41,12 @@ export const metadata: Metadata = {
     " კაბები",
     " ფეხსაცმელი",
     " აქსესუარები",
-    "clothing for pipinikas",
-    "shoes for pipinikas",
-    "accessories for pipinikas",
-    "online store for pipinikas",
-    "pipinika online store",
-    "pipinika store",
+    "clothing for GalaKids",
+    "shoes for GalaKids",
+    "accessories for GalaKids",
+    "online store for GalaKids",
+    "GalaKids online store",
+    "GalaKids store",
     "ტანსაცმელი",
     "ფეხსაცმელი",
     "აქსესუარები",
@@ -98,11 +98,11 @@ export const metadata: Metadata = {
       "შეიძინეთ მაღალი ხარისხის  ტანსაცმელი, ფეხსაცმელი და აქსესუარები GalaKids-დან. სწრაფი მიწოდება მთელ საქართველოში. | Purchase high-quality clothing, shoes and accessories from GalaKids. Fast delivery throughout Georgia.",
     images: [
       {
-        url: "https://galakids.ge/logo.png",
+        url: "https://galakids.ge/logo.svg",
         width: 1200,
         height: 630,
         alt: "GalaKids - ონლაინ მაღაზია | Online Store",
-        type: "image/png",
+        type: "image/svg+xml",
       },
     ],
   },
@@ -125,12 +125,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@GalaKids",
     title:
-      "GalaKids -  ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია | Pipinika Clothing, Shoes & Accessories Online Store",
+      "GalaKids -  ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია | GalaKids Clothing, Shoes & Accessories Online Store",
     description:
-      "შეიძინეთ მაღალი ხარისხის  ტანსაცმელი, ფეხსაცმელი და აქსესუარები GalaKids-დან. | Purchase high-quality pipinika clothing, shoes and accessories from GalaKids.",
+      "შეიძინეთ მაღალი ხარისხის  ტანსაცმელი, ფეხსაცმელი და აქსესუარები GalaKids-დან. | Purchase high-quality GalaKids clothing, shoes and accessories from GalaKids.",
     images: [
       {
-        url: "https://galakids.ge/logo.png",
+        url: "https://galakids.ge/logo.svg",
         alt: "GalaKids Logo",
       },
     ],
@@ -154,7 +154,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "GalaKids",
     url: "https://galakids.ge",
-    logo: "https://galakids.ge/logo.png",
+    logo: "https://galakids.ge/logo.svg",
     description:
       " ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში",
     address: {
@@ -186,8 +186,8 @@ export default function RootLayout({
         <meta itemScope itemType="https://schema.org/Organization" />
         <meta itemProp="name" content="GalaKids" />
         <meta itemProp="url" content="https://galakids.ge" />
-        <meta itemProp="logo" content="https://galakids.ge/logo.png" />
-        <meta itemProp="image" content="https://galakids.ge/logo.png" />
+        <meta itemProp="logo" content="https://galakids.ge/logo.svg" />
+        <meta itemProp="image" content="https://galakids.ge/logo.svg" />
         <meta
           itemProp="description"
           content=" ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში"
@@ -216,7 +216,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
 
         {/* Open Graph specific logo */}
-        <meta property="og:logo" content="https://galakids.ge/logo.png" />
+        <meta property="og:logo" content="https://galakids.ge/logo.svg" />
         <meta property="business:contact_data:country_name" content="Georgia" />
         <meta property="business:contact_data:locality" content="Tbilisi" />
 

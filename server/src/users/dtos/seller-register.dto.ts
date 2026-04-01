@@ -29,7 +29,7 @@ export class SellerRegisterDto {
   logoFile?: Express.Multer.File;
 
   @ApiProperty({
-    example: 'https://example.com/logo.png',
+    example: 'https://example.com/logo.svg',
     description: 'მაღაზიის ლოგოს URL მისამართი',
     required: false,
   })

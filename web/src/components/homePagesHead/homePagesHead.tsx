@@ -10,11 +10,11 @@ const HomePagesHead = () => {
     <div className="home-pages-head">
       <h1 className="main-slogan">{t("home.welcomeMessage")}</h1>
       <div className="logo-containerHome">
-        <p className="sub-slogan">{t("home.pipSound")}</p>
+        {/* <p className="sub-slogan">{t("home.pipSound")}</p> */}
         <div className="puzzle-logo-wrapper">
           <PuzzleLogo size={350} />
         </div>
-        <p className="sub-slogan slogan2">{t("home.pipSound")}</p>
+        {/* <p className="sub-slogan slogan2">{t("home.pipSound")}</p> */}
       </div>
     </div>
   );

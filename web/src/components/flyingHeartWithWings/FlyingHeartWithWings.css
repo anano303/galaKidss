@@ -16,7 +16,7 @@
 .heart2 {
   width: 280%; /* Restore original size for desktop */
   height: 200%;
-  background-image: url(./half\ logo.png);
+  background-image: url(./half\ logo.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

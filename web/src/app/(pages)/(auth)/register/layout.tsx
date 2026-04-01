@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "შექმენით ანგარიში GalaKids-ზე და დაიწყეთ ონლაინ შოპინგი. მარტივი რეგისტრაცია და სწრაფი ყიდვა. | Create an account on GalaKids and start online shopping. Easy registration and fast shopping.",
   keywords: [
-       "GalaKids",
+    "GalaKids",
     "GalaKids",
     "GalaKids ტანსაცმელი",
     "GalaKids ფეხსაცმელი",

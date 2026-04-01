@@ -11,7 +11,7 @@ import {
   Check,
   X,
 } from "lucide-react";
-import logo from "../../assets/Images/Layer_1.png";
+const logo = "/logo.svg";
 import { useLanguage } from "@/hooks/LanguageContext";
 import { useAuth } from "@/hooks/use-auth";
 import { Role } from "@/types/role";

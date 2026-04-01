@@ -292,8 +292,8 @@ export const TRANSLATIONS: Translations = {
       heroSubtitle:
         "პერსონალური და ხელნაკეთი პროდუქტები ქართველი ხელოვანებისგან",
       mostPopular: "ყველაზე პოპულარული",
-      welcomeMessage: "მოგესალმებით საპიპინეთშიიიიიიიი !!!",
-      pipSound: "პიიიპ პიიიიპ!",
+      welcomeMessage: "მოგესალმებით GalaKids-ში!",
+      // pipSound: "სასიამოვნო !",
     },
 
     // Timer translations
@@ -777,7 +777,7 @@ export const TRANSLATIONS: Translations = {
       clearAllFilters: "Clear All Filters",
       filterToggle: "Filters",
       close: "Close",
-      searchPlaceholder: "Search pipiniks...",
+      searchPlaceholder: "Search products...",
       // Error messages
       errorLoadingCategories: "Failed to load categories",
       errorLoadingSubcategories: "Failed to load subcategories",
@@ -947,8 +947,8 @@ export const TRANSLATIONS: Translations = {
 
     home: {
       mostPopular: "Most Popular",
-      welcomeMessage: "Welcome to Pipiii World !!!",
-      pipSound: "Piip Piip!",
+      welcomeMessage: "Welcome to GalaKids World !!!",
+      // pipSound: "Piip Piip!",
     },
 
     // Timer translations

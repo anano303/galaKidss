@@ -6,14 +6,14 @@ export default function StructuredDataOrganization() {
     url: "https://galakids.ge",
     logo: {
       "@type": "ImageObject",
-      url: "https://galakids.ge/logo.png",
+      url: "https://galakids.ge/logo.svg",
       width: 1200,
       height: 630,
-      contentUrl: "https://galakids.ge/logo.png",
+      contentUrl: "https://galakids.ge/logo.svg",
     },
-    image: "https://galakids.ge/logo.png",
+    image: "https://galakids.ge/logo.svg",
     description:
-      "თანამედროვე პიპინიკა ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში. Modern online store for pipinika clothing, shoes and accessories in Georgia.",
+      "თანამედროვე GalaKids ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში. Modern online store for GalaKids clothing, shoes and accessories in Georgia.",
     address: {
       "@type": "PostalAddress",
       addressCountry: "GE",

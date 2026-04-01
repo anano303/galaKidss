@@ -4,16 +4,16 @@ export default function SEOMetaTags() {
   return (
     <Head>
       {/* Google Business Logo */}
-      <meta property="og:logo" content="https://galakids.ge/logo.png" />
-      <meta name="logo" content="https://galakids.ge/logo.png" />
+      <meta property="og:logo" content="https://galakids.ge/logo.svg" />
+      <meta name="logo" content="https://galakids.ge/logo.svg" />
 
       {/* Rich Snippets for Google */}
       <meta itemProp="name" content="GalaKids" />
       <meta
         itemProp="description"
-        content=" პიპინიკა ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში"
+        content=" GalaKids ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში"
       />
-      <meta itemProp="image" content="https://galakids.ge/logo.png" />
+      <meta itemProp="image" content="https://galakids.ge/logo.svg" />
 
       {/* Additional Open Graph tags */}
       <meta property="og:image:width" content="1200" />
@@ -21,7 +21,7 @@ export default function SEOMetaTags() {
       <meta property="og:image:type" content="image/png" />
       <meta
         property="og:image:secure_url"
-        content="https://galakids.ge/logo.png"
+        content="https://galakids.ge/logo.svg"
       />
 
       {/* Business Information */}

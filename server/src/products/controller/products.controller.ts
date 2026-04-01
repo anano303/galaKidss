@@ -178,39 +178,9 @@ export class ProductsController {
       ],
       {
         fileFilter: (req, file, cb) => {
-          const allowedMimeTypes = [
-            'image/jpeg',
-            'image/png',
-            'image/jpg',
-            'image/gif',
-            'image/webp',
-            'image/bmp',
-            'image/tiff',
-            'image/svg+xml',
-          ];
-
-          // Also check if the file extension matches image types
-          const allowedExtensions = [
-            '.jpg',
-            '.jpeg',
-            '.png',
-            '.gif',
-            '.webp',
-            '.bmp',
-            '.tiff',
-            '.svg',
-          ];
-          const fileExtension = file.originalname
-            .toLowerCase()
-            .substring(file.originalname.lastIndexOf('.'));
-
-          if (
-            !allowedMimeTypes.includes(file.mimetype) &&
-            !allowedExtensions.includes(fileExtension)
-          ) {
+          if (!file.mimetype.startsWith('image/')) {
             return cb(new Error('Only image files are allowed!'), false);
           }
-
           cb(null, true);
         },
       },
@@ -336,39 +306,9 @@ export class ProductsController {
       ],
       {
         fileFilter: (req, file, cb) => {
-          const allowedMimeTypes = [
-            'image/jpeg',
-            'image/png',
-            'image/jpg',
-            'image/gif',
-            'image/webp',
-            'image/bmp',
-            'image/tiff',
-            'image/svg+xml',
-          ];
-
-          // Also check if the file extension matches image types
-          const allowedExtensions = [
-            '.jpg',
-            '.jpeg',
-            '.png',
-            '.gif',
-            '.webp',
-            '.bmp',
-            '.tiff',
-            '.svg',
-          ];
-          const fileExtension = file.originalname
-            .toLowerCase()
-            .substring(file.originalname.lastIndexOf('.'));
-
-          if (
-            !allowedMimeTypes.includes(file.mimetype) &&
-            !allowedExtensions.includes(fileExtension)
-          ) {
+          if (!file.mimetype.startsWith('image/')) {
             return cb(new Error('Only image files are allowed!'), false);
           }
-
           cb(null, true);
         },
       },

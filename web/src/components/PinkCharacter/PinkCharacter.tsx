@@ -116,8 +116,8 @@ const PinkCharacter: React.FC = () => {
                 className="pink-character-title"
               >
                 {language === "en"
-                  ? "Grand sales on Pippinika shirts!!!"
-                  : "გრანდიოზული ფასდაკლება პიპინიკა მაისურებზე!!!"}
+                  ? "Grand sales on GalaKids shirts!!!"
+                  : "გრანდიოზული ფასდაკლება GalaKids მაისურებზე!!!"}
               </motion.h2>
 
               {/* Mobile image - shown between title and button on mobile */}

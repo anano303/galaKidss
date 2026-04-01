@@ -74,7 +74,7 @@ export function CreateProductForm({
       hashtags: [],
       brandLogo: undefined,
       videoDescription: "",
-    }
+    },
   );
 
   // State for new category structure
@@ -89,7 +89,7 @@ export function CreateProductForm({
   const [availableColors, setAvailableColors] = useState<string[]>([]);
 
   const [deliveryType, setDeliveryType] = useState<"SELLER" | "SoulArt">(
-    "SoulArt"
+    "SoulArt",
   );
   const [minDeliveryDays, setMinDeliveryDays] = useState("");
   const [maxDeliveryDays, setMaxDeliveryDays] = useState("");
@@ -105,7 +105,7 @@ export function CreateProductForm({
     queryKey: ["categories"],
     queryFn: async () => {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/categories?includeInactive=false`
+        `${process.env.NEXT_PUBLIC_API_URL}/categories?includeInactive=false`,
       );
       return response.json();
     },
@@ -119,7 +119,7 @@ export function CreateProductForm({
     queryFn: async () => {
       if (!selectedCategory) return [];
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/subcategories?categoryId=${selectedCategory}&includeInactive=false`
+        `${process.env.NEXT_PUBLIC_API_URL}/subcategories?categoryId=${selectedCategory}&includeInactive=false`,
       );
       return response.json();
     },
@@ -150,7 +150,7 @@ export function CreateProductForm({
     queryFn: async () => {
       try {
         const response = await fetchWithAuth(
-          "/categories/attributes/age-groups"
+          "/categories/attributes/age-groups",
         );
         if (!response.ok) {
           return [];
@@ -169,7 +169,7 @@ export function CreateProductForm({
     if (language === "en") {
       // Find the color in availableColorsData to get its English name
       const colorObj = availableColorsData.find(
-        (color) => color.name === colorName
+        (color) => color.name === colorName,
       );
       return colorObj?.nameEn || colorName;
     }
@@ -181,7 +181,7 @@ export function CreateProductForm({
     if (language === "en") {
       // Find the age group in availableAgeGroupsData to get its English name
       const ageGroupObj = availableAgeGroupsData.find(
-        (ageGroup) => ageGroup.name === ageGroupName
+        (ageGroup) => ageGroup.name === ageGroupName,
       );
       return ageGroupObj?.nameEn || ageGroupName;
     }
@@ -192,7 +192,7 @@ export function CreateProductForm({
   useEffect(() => {
     if (subcategories && selectedSubcategory) {
       const subcategory = subcategories.find(
-        (sub) => sub.id === selectedSubcategory
+        (sub) => sub.id === selectedSubcategory,
       );
       if (subcategory) {
         setAvailableAgeGroups(subcategory.ageGroups || []);
@@ -389,7 +389,7 @@ export function CreateProductForm({
     }
   };
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     const processedValue =
@@ -430,25 +430,25 @@ export function CreateProductForm({
 
   const handleAttributeChange = (
     type: "ageGroups" | "sizes" | "colors",
-    value: string
+    value: string,
   ) => {
     if (type === "ageGroups") {
       setSelectedAgeGroups((prev) =>
         prev.includes(value)
           ? prev.filter((item) => item !== value)
-          : [...prev, value]
+          : [...prev, value],
       );
     } else if (type === "sizes") {
       setSelectedSizes((prev) =>
         prev.includes(value)
           ? prev.filter((item) => item !== value)
-          : [...prev, value]
+          : [...prev, value],
       );
     } else if (type === "colors") {
       setSelectedColors((prev) =>
         prev.includes(value)
           ? prev.filter((item) => item !== value)
-          : [...prev, value]
+          : [...prev, value],
       );
     }
   };
@@ -506,7 +506,7 @@ export function CreateProductForm({
       const isPriceValid = validateField("price", formData.price);
       const isDescriptionValid = validateField(
         "description",
-        formData.description
+        formData.description,
       );
 
       if (!isNameValid || !isPriceValid || !isDescriptionValid) {
@@ -527,10 +527,9 @@ export function CreateProductForm({
         return;
       }
 
-      const allowedTypes = ["image/jpeg", "image/png", "image/jpg"];
       if (
         formData.images.some(
-          (image) => image instanceof File && !allowedTypes.includes(image.type)
+          (image) => image instanceof File && !image.type.startsWith("image/"),
         )
       ) {
         setErrors((prev) => ({
@@ -575,7 +574,7 @@ export function CreateProductForm({
       formDataToSend.append("descriptionEn", formData.descriptionEn || "");
       formDataToSend.append("countInStock", String(totalCount));
 
-        // Add video description if present
+      // Add video description if present
       if (formData.videoDescription) {
         formDataToSend.append("videoDescription", formData.videoDescription);
       }
@@ -610,7 +609,7 @@ export function CreateProductForm({
       if (isSeller) {
         formDataToSend.append(
           "brand",
-          user?.name || user?.storeName || formData.brand || "GalaKids"
+          user?.name || user?.storeName || formData.brand || "GalaKids",
         );
       } else {
         formDataToSend.append("brand", formData.brand || "GalaKids");
@@ -697,7 +696,7 @@ export function CreateProductForm({
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
 
       if (!response.ok) {
@@ -742,7 +741,9 @@ export function CreateProductForm({
     } catch (error) {
       console.error("Error:", error);
       setServerError(
-        error instanceof Error ? error.message : t("adminProducts.generalError")
+        error instanceof Error
+          ? error.message
+          : t("adminProducts.generalError"),
       );
     } finally {
       setPending(false);
@@ -753,7 +754,7 @@ export function CreateProductForm({
   useEffect(() => {
     if (selectedSubcategory && subcategories) {
       const subcategory = subcategories.find(
-        (sub) => String(sub.id) === String(selectedSubcategory)
+        (sub) => String(sub.id) === String(selectedSubcategory),
       );
 
       if (subcategory) {
@@ -767,21 +768,21 @@ export function CreateProductForm({
         if (initialData) {
           if (initialData.ageGroups && Array.isArray(initialData.ageGroups)) {
             const validAgeGroups = initialData.ageGroups.filter((ag) =>
-              subcategory.ageGroups.includes(ag)
+              subcategory.ageGroups.includes(ag),
             );
             setSelectedAgeGroups(validAgeGroups);
           }
 
           if (initialData.sizes && Array.isArray(initialData.sizes)) {
             const validSizes = initialData.sizes.filter((size) =>
-              subcategory.sizes.includes(size)
+              subcategory.sizes.includes(size),
             );
             setSelectedSizes(validSizes);
           }
 
           if (initialData.colors && Array.isArray(initialData.colors)) {
             const validColors = initialData.colors.filter((color) =>
-              subcategory.colors.includes(color)
+              subcategory.colors.includes(color),
             );
             setSelectedColors(validColors);
           }
@@ -1388,7 +1389,7 @@ export function CreateProductForm({
             !selectedSubcategory ||
             formData.images.length === 0 ||
             Object.values(errors).some(
-              (error) => error !== undefined && error !== null && error !== ""
+              (error) => error !== undefined && error !== null && error !== "",
             )
           }
           style={{

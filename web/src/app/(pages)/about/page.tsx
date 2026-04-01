@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import logo from "../../../assets/Images/Layer_1.png";
+const logo = "/logo.svg";
 import "./about.css";
 import creator1 from "./heart (1).png";
 import creator2 from "./heart (2).png";
@@ -247,9 +247,7 @@ export default function AboutPage() {
     (isEn ? "Let's GalaKids together" : "მოდი, ერთად დავაპიპინოთ");
   const creatorsTitle =
     (isEn ? aboutData?.creatorsTitleEn : aboutData?.creatorsTitle) ||
-    (isEn
-      ? "Meet the creators of GalaKids!"
-      : "გაიცანი GalaKids შემქმნელები!");
+    (isEn ? "Meet the creators of GalaKids!" : "გაიცანი GalaKids შემქმნელები!");
 
   const titleField = isEn ? "titleEn" : "title";
   const brandIntroTitleField = isEn ? "brandIntroTitleEn" : "brandIntroTitle";

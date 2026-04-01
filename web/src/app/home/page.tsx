@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://galakids.ge/home",
     images: [
       {
-        url: "https://galakids.ge/logo.png",
+        url: "https://galakids.ge/logo.svg",
         width: 1200,
         height: 630,
         alt: "GalaKids Logo",

@@ -23,13 +23,13 @@ const DEFAULT_ABOUT_SECTIONS = [
   {
     text: 'ჩვენი ტანსაცმელი გაფორმებულია საპიპინოებით, მაგრამ ეს მხოლოდ ვიზუალი არ არის - ისინი რეალურად აპიპინებენ! რადგან გვჯერა, რომ რაც აცვია ადამიანს, სწორედ ისაა მისი ხასიათის გაგრძელება.',
     textEn:
-      "Our clothing is decorated with Pipiniks, but it's not just visual — they actually cuddle! Because we believe that what you wear is an extension of your personality.",
+      "Our clothing is decorated with GalaKids, but it's not just visual — they actually cuddle! Because we believe that what you wear is an extension of your personality.",
     type: 'normal',
   },
   {
     text: 'ბრენდი GalaKids შეიქმნა ორი მეგობრის — მსახიობების რუსკა მაყაშვილისა და ლაშა ჯუხარაშვილის კოლაბორაციით. რომლებსაც ერთი მიზანი აერთიანებთ: შექმნან ტანსაცმელი და აქსესუარები, რომელიც არ აწესებს ჩარჩოებს და გაძლევთ საშუალებას იყო ისეთი, როგორიც ხარ — ხალისიანი, გულწრფელი, თავისუფალი და... პიპინაა',
     textEn:
-      "The brand GalaKids was created through the collaboration of two friends — actors Ruska Makashvili and Lasha Jukharashvili. United by one goal: to create clothing and accessories that don't impose limits and let you be who you are — cheerful, sincere, free and... a Pipinik.",
+      "The brand GalaKids was created through the collaboration of two friends — actors Ruska Makashvili and Lasha Jukharashvili. United by one goal: to create clothing and accessories that don't impose limits and let you be who you are — cheerful, sincere, free and... a GalaKids.",
     type: 'normal',
   },
   {

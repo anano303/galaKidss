@@ -31,47 +31,50 @@ export function ProductCard({
 
   return (
     <div>
-    <div className={`product-card ${theme} ${className}`}>
-      <Link href={`/products/${product._id}`}>
-        <div className="heart-shape"></div>
-        <div className="product-image">
-          <Image
-            src={productImage}
-            alt={displayName}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority
-            className="image"
-          />
-        </div>
-      </Link>
-      {/* <AddToCartButton
+      <div className={`product-card ${theme} ${className}`}>
+        <Link href={`/products/${product._id}`}>
+          <div className="heart-shape"></div>
+          <div className="product-image">
+            <Image
+              src={productImage}
+              alt={displayName}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority
+              className="image"
+            />
+          </div>
+        </Link>
+        {/* <AddToCartButton
         productId={product._id}
         countInStock={product.countInStock}
         className="addButtonCart"
       /> */}{" "}
-     
-    </div>
-     <div className="product-cards-lastDiv">
-      <Link className="FColumn" href={`/products/${product._id}`}>
-        <div className="product-info">
-          <div className="product-name-rating">
-            <h3 className="product-name">{displayName}</h3>
-          </div>
-
-          <div className="product-details">
-            <div className="priceAndRaiting">
-              <h3 className="product-price">
-                {product.price} {language === "en" ? "GEL" : "ლარი"}{" "}
+      </div>
+      <div className="product-cards-lastDiv">
+        <Link className="FColumn" href={`/products/${product._id}`}>
+          <div className="product-info">
+            <div className="product-name-rating">
+              <h3 className="product-name">
+                {displayName.split(" ").length > 2
+                  ? displayName.split(" ").slice(0, 2).join(" ") + "..."
+                  : displayName}
               </h3>
             </div>
+
+            <div className="product-details">
+              <div className="priceAndRaiting">
+                <h3 className="product-price">
+                  {product.price} {language === "en" ? "GEL" : "ლარი"}{" "}
+                </h3>
+              </div>
+            </div>
           </div>
-        </div>
-        <button className="buyBtn">
-          {" "}
-          {language === "en" ? "Buy" : "იყიდე"}{" "}
-        </button>
-      </Link>
+          <button className="buyBtn">
+            {" "}
+            {language === "en" ? "Buy" : "იყიდე"}{" "}
+          </button>
+        </Link>
       </div>
     </div>
   );

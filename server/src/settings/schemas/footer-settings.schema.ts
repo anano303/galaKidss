@@ -27,8 +27,7 @@ export class FooterSettings {
   facebookUrl: string;
 
   @Prop({
-    default:
-      'https://www.instagram.com/galakids',
+    default: 'https://www.instagram.com/galakids',
   })
   instagramUrl: string;
 

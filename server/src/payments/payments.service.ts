@@ -86,8 +86,7 @@ export class PaymentsService {
         payment_method: ['card'],
         ttl: 10,
         redirect_urls: {
-          success:
-            data.successUrl || 'https://galakids.ge/checkout/success',
+          success: data.successUrl || 'https://galakids.ge/checkout/success',
           fail: data.failUrl || 'https://galakids.ge/checkout/fail',
         },
       };
