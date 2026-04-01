@@ -12,6 +12,7 @@ import Footer from "@/components/footer/footer";
 import ChatButton from "@/components/chat-button/chat-button";
 import { Toaster } from "@/components/toaster";
 import StructuredDataOrganization from "@/components/structured-data-organization";
+import { Analytics } from "@vercel/analytics/next";
 
 // ⚠️ ყურადღება: აქ აღარ გვაქვს Header/Footer რადგან ისინი გადადის EntryGate-ში
 export const metadata: Metadata = {
@@ -253,6 +254,7 @@ export default function RootLayout({
           </AuthProvider>
         </Providers>
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
